@@ -1,15 +1,19 @@
 import "./App.css";
-import "./pictures.json";
+import Netflix from "./images/logo-netflix.jpg";
+import picturesCategories from "./pictures.json";
 
 function App() {
   return (
     <div>
-      <h1>Netflix</h1>
-
-      <di>
-        <h2></h2>
-        <img></img>
-      </di>
+      <div>
+        <img alt="logo netflix" src={Netflix} />
+      </div>
+      <div>
+        {picturesCategories.map((element, index) => {
+          return <h2 key={index}>{element.category}</h2>;
+        })}
+        <div></div>
+      </div>
     </div>
   );
 }
